@@ -5,7 +5,7 @@ import {
 } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import greetingReducer from './greetings/GreetingReducer';
+import greetingReducer from './greetings/greetingReducer';
 
 const rootReducer = combineReducers({
   greetings: greetingReducer,
