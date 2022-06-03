@@ -16,11 +16,11 @@ $ cd hello-react-front-end
 ```
 
 # Installation
-Clone the repo and run bundle install in the command line to install the dependencies
+Clone the repo and run npm install in the command line to install the dependencies
 
-```bash
-bundle install
-```
+npm install
+
+npm start
 
 ## Authors
 
