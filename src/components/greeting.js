@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchGreetingsFromApi } from '../redux/greetings/greetingReducer';
+import { fetchGreetingsFromApi } from '../redux/greetings/greetingReducer.rb';
 
 const Greeting = () => {
   const allGreetings = useSelector((state) => state.greetings);
