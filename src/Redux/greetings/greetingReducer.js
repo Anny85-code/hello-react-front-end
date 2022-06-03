@@ -12,17 +12,10 @@ const initialState = []
 
 
 export const fetchGreetingsFromApi = () => async (dispatch) => {
-    const result = await axios.get('localhost:3000/api/v1/greetings',{mode: 'no-cors'});
     
-    const data = await result
-    dispatch(getGreetings(data));
-
-    // const req = await fetch('http://localhost:3000/api/v1/greetings', {
-    //   mode: 'no-cors'
-    // });
-    // const res = await req.json();
-    // dispatch(getGreetings(res));
-    // console.log('Hi bright',res);
+    const req = await fetch('http://localhost:3000/api/v1/greetings');
+    const res = await req.json();
+    dispatch(getGreetings(res));
   };
 
 const greetingReducer = (state = initialState, action) => {
