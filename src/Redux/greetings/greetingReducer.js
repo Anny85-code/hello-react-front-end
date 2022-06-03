@@ -8,18 +8,24 @@ const getGreetings = (payload) => ({
 })
 
 
-const initialState = {
-    greetings: []
-}
+const initialState = []
+
 
 export const fetchGreetingsFromApi = () => async (dispatch) => {
-    const result = await axios.get('localhost:3000/api/v1/greetings');
-    const data = result.data.greetings
+    const result = await axios.get('localhost:3000/api/v1/greetings',{mode: 'no-cors'});
+    
+    const data = await result
     dispatch(getGreetings(data));
+
+    // const req = await fetch('http://localhost:3000/api/v1/greetings', {
+    //   mode: 'no-cors'
+    // });
+    // const res = await req.json();
+    // dispatch(getGreetings(res));
+    // console.log('Hi bright',res);
   };
 
 const greetingReducer = (state = initialState, action) => {
-  console.log(action.type);
   switch (action.type) {
     case FETCH_GREETINGS:
       return action.payload;
