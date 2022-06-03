@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+/* eslint-disable */
 import { fetchGreetingsFromApi } from '../redux/greetings/greetingReducer';
 
 const Greeting = () => {

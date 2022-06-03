@@ -5,6 +5,8 @@ import './index.css';
 import { Provider } from 'react-redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+/* eslint-disable */
+
 import store from './redux/configureStore';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
